@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+  <section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">Mountain Trips</h1>
+          <p class="lead">Take a look at these wonderful mountain trips. No matter which part of the country you call home. <br>There is a mountain trip close to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">
+              <i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item active"> Browse Mountain Trips</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-4">
+    <div class="container">
+      <div class="row">
+
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'images/tn_mtn.jpg' %}" alt="Tennessee Mountain">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">Starting at $500</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> Tennessee Mountains</p>
+              </div>
+              <hr>
+              
+              <a href="/mountain_tn" class="btn-primary btn-block btn-lg">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'images/ca_mtn.jpg' %}" alt="California Mountains">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">Starting at $900</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> California Mountains</p>
+              </div>
+              <hr>
+              
+              <a href="/mountain_ca" class="btn-primary btn-block btn-lg">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'images/tn_mtn.jpg' %}" alt="Tennessee Mountain">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">Coming Soon</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> </p>
+              </div>
+              <hr>
+              
+              <a href="" class="btn-primary btn-block btn-lg">More Info</a>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+  {% endblock %}
