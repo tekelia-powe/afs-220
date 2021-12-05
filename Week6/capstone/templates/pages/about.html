@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2> About Crimson Tide Travel </h2>
+          <p> Crimson Tide Travel grew out of the Capstone Project from Bryan University. <br> Both team member are residents of the state of Alabama and what a better respresentation of Alabama than The Crimson Tide. <br> Thus Crimson Tide Travel was born. ROLLLL TIDE!!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="listings" class="py-4">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2> The Team </h2>
+            
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row">
+
+        <!-- Team Member 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'images/man.jpg' %}" alt="" style="height: 246px;">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">James Stephens</span>
+              </h2>
+            </div>
+            <div class="card-body">
+                    
+              <!-- <a href="/" class="btn-primary btn-block btn-lg">About James</a> -->
+            </div>
+          </div>
+        </div>
+
+        
+         <!-- Team Memeber 2 -->
+         <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card listing-preview">
+              <img class="card-img-top" src = "{% static 'images/woman.jpg' %}" alt="" style="height: 246px;">
+              <div class="card-img-overlay">
+                <h2>
+                  <span class="badge badge-secondary text-white">Tekelia Terry</span>
+                </h2>
+              </div>
+              <div class="card-body">
+                                
+                <!-- <a href="/" class="btn-primary btn-block btn-lg">About Tekelia</a> -->
+              </div>
+            </div>
+          </div>
+    </section>
+{% endblock%}
