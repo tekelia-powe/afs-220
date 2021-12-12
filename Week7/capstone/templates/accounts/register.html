@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<section id="register" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4>
+                <i class="fas fa-user-plus"></i> Register</h4>
+            </div>
+            <div class="card-body">
+              <!-- Error message -->
+              {% include 'partials/_alerts.html' %}
+                <form action="{% url 'register' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" name="first_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" name="last_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Password</label>
+                  <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Confirm Password</label>
+                  <input type="password" name="password2" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="question1">Security Question 1</label>
+                  <select name = "question1" required>
+                    <option value = "Q0" name="question1" selected >Please select an option ...</option>
+                    <option value = "Q1" name="question1" >Your favorite color?</option>
+                    <option value = "Q2" name="question1">Your childhood nickname?</option>
+                    <option value = "Q3" name="question1">Your High School Mascot?</option>
+                 </select>
+                 <label for="answer1">Security Question Answer 1</label>
+                  <input type="text" name="answer1" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="question2">Security Question 2</label>
+                  <select name = "question2" required>
+                    <option value = "Q0" name="question2" selected >Please select an option ...</option>
+                    <option value = "Q1" name="question2">Your favorite color?</option>
+                    <option value = "Q2" name="question2">Your childhood nickname?</option>
+                    <option value = "Q3" name="question2">Your High School Mascot?</option>
+                 </select>
+                 <label for="answer2">Security Question Answer 2</label>
+                  <input type="text" name="answer2" class="form-control" required>
+                </div>
+                
+                <input type="submit" value="Register" class="btn btn-secondary btn-block">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock%}
